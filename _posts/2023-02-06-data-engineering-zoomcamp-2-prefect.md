@@ -10,6 +10,7 @@ The second module of the [Data Engineering Zoomcamp](https://github.com/DataTalk
 For years I've used bash/python scripts with cronjobs, and in the last year airflow, for orchestrating and executing these types of workflows. It's always good to see what others use for these types of situtations.
 
 My first impression was that setting it up was very streamlined. The first flow was basically just a plain python script, except with some `@flow` and `@task` decorators above the function definitions. The first session did have a lot of "magic" behind the scenes, but I was glad to learn that there were some useful things that could be configured behind the scenes:
+
     - everything seems to work via the REST API, you can communicate with it either via python modules or CLI
     - you can either run your own server (Orion) or use a hosted solution from Prefect (Prefect Cloud). I'm not entirely certain whether Orion is just meant for local development purposes or if people deploy their own version in production too.
     - Running a python script with decorated functions will give observability to the execution details, and also gain automatic retries, notifications, etc. What's nice is that it still feels like you're running regular python, you can pass data from one task to another via function arguments as usual. 
